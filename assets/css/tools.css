@@ -1,0 +1,54 @@
+/* Tools Page Styles */
+
+.tools-page {
+    padding: 2rem;
+    text-align: center;
+}
+
+.tools-page h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+
+.tools-page .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.tools-page .tool-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background 0.3s;
+    font-weight: 500;
+}
+
+.tools-page .tool-card:hover {
+    transform: translateY(-5px);
+    background: #f0f8ff;
+}
+
+
+/* Dark Mode for Tools Page */
+
+body.dark .tools-page {
+    background: #121212;
+}
+
+body.dark .tools-page h1 {
+    color: var(--primary);
+}
+
+body.dark .tools-page .tool-card {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .tools-page .tool-card:hover {
+    background: #2a2a2a;
+}

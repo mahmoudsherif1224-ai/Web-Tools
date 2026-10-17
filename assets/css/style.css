@@ -1,0 +1,395 @@
+/* ================================
+   Reset
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   ألوان أساسية (Variables)
+   ================================ */
+
+:root {
+    --bg: #f9fafc;
+    --text: #222;
+    --primary: #0066ff;
+    --accent: #00c896;
+}
+
+
+/* ================================
+   الجسم
+   ================================ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+/* ================================
+   النافبار
+   ================================ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: #fff;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00bcd4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #fff;
+    background: #00bcd4;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+.logo:hover {
+    color: #fff;
+    transition: 0.3s;
+}
+
+
+/* ================================
+   الهيرو
+   ================================ */
+
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero input {
+    padding: 0.7rem;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* زر عام */
+
+.btn {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+
+/* ================================
+   الكروت (Homepage Tools Grid)
+   ================================ */
+
+.tools-grid {
+    padding: 2rem;
+}
+
+.tools-grid h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tools-grid .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.tool-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tool-card i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    display: block;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    color: var(--accent);
+}
+
+
+/* ================================
+   صفحة الأداة الفردية
+   ================================ */
+
+.tool-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tool-page h1 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.tool-page p {
+    margin-bottom: 1rem;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.output-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+
+/* ================================
+   زر الرجوع
+   ================================ */
+
+.btn-back {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1rem;
+    background: #eee;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: #00bcd4;
+    color: #fff;
+}
+
+
+/* ================================
+   الفوتر
+   ================================ */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #f1f1f1;
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+.ad-banner {
+    margin-top: 1rem;
+    background: #eee;
+    height: 90px;
+}
+
+
+/* ================================
+   Dark Mode (Global)
+   ================================ */
+
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark .navbar {
+    background: var(--primary);
+}
+
+body.dark .hero {
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    color: #ffffff;
+}
+
+body.dark .hero h1 {
+    color: #ffffff;
+}
+
+body.dark .hero p {
+    color: #cccccc;
+}
+
+body.dark .hero input {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark .tools-grid h2 {
+    color: #00bcd4;
+}
+
+body.dark .tool-card {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .tool-card:hover {
+    background: #2e2e2e;
+}
+
+body.dark .tool-page {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark footer {
+    background: #1e1e1e;
+    color: #cccccc;
+}
+
+body.dark .tool-page .output-box p {
+    color: #1e1e1e;
+}
+
+body.dark .tool-page .output-box pre {
+    color: #1e1e1e;
+}
+
+.btn-copy {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+}
+
+.btn-copy:hover {
+    background: var(--accent);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.blog-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.blog-card p {
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Dark Mode */
+
+body.dark .blog-card {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .blog-card h2 {
+    color: #00bcd4;
+}
+
+.mahmoud {
+    padding: 3rem;
+}

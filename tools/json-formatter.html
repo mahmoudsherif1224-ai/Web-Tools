@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Formatter - WebTools</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Web<span>Tools</span></a>
+            <ul class="nav-links">
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle">🌙</button>
+        </nav>
+        <a href="../tools.html" class="btn-back">← Back to Tools</a>
+    </header>
+    <main class="tool-page">
+        <h1><i class="fa fa-code"></i> JSON Formatter</h1>
+        <p>Format and validate JSON data.</p>
+        <textarea id="jsonInput" rows="6" placeholder='{"name":"Name"}'></textarea>
+        <button id="formatBtn" class="btn">Format JSON</button>
+        <div class="output-box"><pre id="output"></pre></div>
+        <button class="btn-copy" onclick="copyOutput()">Copy</button>
+    </main>
+
+    <div class="mahmoud">
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 WebTools. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p>
+        <div class="ad-banner">[Ad Space]</div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        document.getElementById("formatBtn").addEventListener("click", () => {
+            try {
+                const obj = JSON.parse(document.getElementById("jsonInput").value);
+                document.getElementById("output").textContent = JSON.stringify(obj, null, 2);
+            } catch (e) {
+                document.getElementById("output").textContent = "Invalid JSON!";
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Text to Speech - WebTools</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Web<span>Tools</span></a>
+            <ul class="nav-links">
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle">🌙</button>
+        </nav>
+        <a href="../tools.html" class="btn-back">← Back to Tools</a>
+    </header>
+    <main class="tool-page">
+        <h1><i class="fa fa-volume-up"></i> Text to Speech</h1>
+        <p>Convert text into spoken words.</p>
+        <textarea id="speechText" rows="5" placeholder="Enter text..."></textarea>
+        <button id="speakBtn" class="btn">Speak</button>
+    </main>
+
+    <div class="mahmoud">
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 WebTools. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p>
+        <div class="ad-banner">[Ad Space]</div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        document.getElementById("speakBtn").addEventListener("click", () => {
+            const msg = new SpeechSynthesisUtterance(document.getElementById("speechText").value);
+            window.speechSynthesis.speak(msg);
+        });
+    </script>
+</body>
+
+</html>

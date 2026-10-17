@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Word Counter - WebTools</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Web<span>Tools</span></a>
+            <ul class="nav-links">
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="darkModeToggle">🌙</button>
+        </nav>
+        <a href="../tools.html" class="btn-back">← Back to Tools</a>
+    </header>
+    <main class="tool-page">
+        <h1><i class="fa fa-file-alt"></i> Word Counter</h1>
+        <p>Count words and characters in your text.</p>
+        <textarea id="textInput" rows="6" placeholder="Type or paste text..."></textarea>
+        <div class="output-box">
+            <p>Words: <span id="wordCount">0</span> | Characters: <span id="charCount">0</span></p>
+        </div>
+    </main>
+
+    <div class="mahmoud">
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 WebTools. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p>
+        <div class="ad-banner">[Ad Space]</div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        const input = document.getElementById("textInput");
+        input.addEventListener("input", () => {
+            const text = input.value.trim();
+            document.getElementById("wordCount").textContent = text ? text.split(/\s+/).length : 0;
+            document.getElementById("charCount").textContent = text.length;
+        });
+    </script>
+</body>
+
+</html>
